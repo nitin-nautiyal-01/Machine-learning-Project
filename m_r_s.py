@@ -1,6 +1,9 @@
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
+import streamlit as st
+import requests
+from form import movies_credits, similarity_matrix
 
 # Assuming you have CSV files named 'movies.csv' and 'credits.csv'
 movies = pd.read_csv('tmdb_5000_movies.csv')
@@ -51,13 +54,7 @@ else:
             recommended_movies.extend(genre_movies.sample(min(5, len(genre_movies))))
 
         return recommended_movies
-import streamlit as st
-import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import linear_kernel
-import requests
 
-from form import movies_credits, similarity_matrix
 
 # Load the trained data or use the existing similarity_matrix and movies_credits
 # Example data loading:
