@@ -1,6 +1,8 @@
 import streamlit as st
 
 def main():
+    st.set_page_config(page_title="Form Submission", page_icon="✅")
+
     st.title("Simple Form with Streamlit")
 
     # Input fields
@@ -10,8 +12,11 @@ def main():
 
     # Submit button
     if st.button("Submit"):
-        # Display submitted data
-        st.success(f"Name: {name}\nEmail: {email}\nPassword: {password}")
+        # Display submitted data on a new page
+        st.write(f"## Form Submitted Successfully!")
+        st.write(f"**Name:** {name}")
+        st.write(f"**Email:** {email}")
+        st.write(f"**Password:** {password}")
 
 if __name__ == "__main__":
     main()
