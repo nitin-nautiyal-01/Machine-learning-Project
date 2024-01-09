@@ -3,7 +3,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 import streamlit as st
 import requests
-from form import movies_credits, similarity_matrix
+
 
 # Assuming you have CSV files named 'movies.csv' and 'credits.csv'
 movies = pd.read_csv('tmdb_5000_movies.csv')
